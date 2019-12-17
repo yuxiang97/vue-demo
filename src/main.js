@@ -3,6 +3,15 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+import './assets/normalize.css'
+import './assets/font/css/font-awesome.css'
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+
+
+
+
+
