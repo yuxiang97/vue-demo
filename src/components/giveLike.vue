@@ -3,7 +3,7 @@
         <div class="zan">
             <i class="fa fa-heart "
                :class="{red : zanData.isZan}"
-               @click="Zan(zanData.id)"></i>
+               @click="dianZan(zanData.id)"></i>
             <span>{{zanData.count}}</span>
         </div>
     </div>
@@ -23,7 +23,7 @@
             }
         },
         methods: {
-            Zan(id) {
+            dianZan(id) {
                 this.$emit('state', id)
             }
         }
@@ -31,9 +31,13 @@
 </script>
 
 <style lang="scss">
+    .like {
+        width: 300px;
+        margin: 0 auto;
+    }
     .zan {
         width: 100%;
-        margin: 5px 0;
+        margin: 2px auto 0;
         line-height: 30px;
         border: 1px solid;
         .red {

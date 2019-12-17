@@ -1,11 +1,13 @@
 <template>
     <div class="todo-container">
-        <ol>
-            <li v-for="(item, index) in todos" :key="index">{{ item }}</li>
-        </ol>
-        <div class="input">
-            <input type="text" v-model="item">
-            <button v-on:click="submitTodo">提交</button>
+        <div class="list">
+            <ol class="ol">
+                <li v-for="(item, index) in todos" :key="index" class="li">{{ item }}</li>
+            </ol>
+            <div class="input">
+                <input type="text" v-model="item">
+                <button v-on:click="submitTodo">提交</button>
+            </div>
         </div>
     </div>
 </template>
@@ -35,6 +37,14 @@
     }
 </script>
 
-<style>
-
+<style lang="scss">
+    .list {
+        width: 300px;
+        border: 1px solid;
+        margin: 0 auto 20px;
+        .li {
+            line-height: 25px;
+            border-bottom: 1px solid;
+        }
+    }
 </style>
